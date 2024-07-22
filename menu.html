@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Playwrite+PE:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Playwrite+PE:wght@100..400&family=Signika+Negative:wght@300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLWtI_y-FvkIz7dr6OYGOi6-j_eVjlpCQ4BQ&s);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #5e403a;
+            color: #f0e6d2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #cafe_name {
+            max-width: 300px;
+            font-size: 25px;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #ffffff;
+            font-family: "Playwrite AT", cursive;
+            font-optical-sizing: auto;
+            font-weight: 550;
+            font-style: normal;
+
+        }
+
+        div#navbarSupportedContent {
+            margin-right: 20px;
+            margin-left: 160px;
+            font-size: 15px;
+            font-weight: 300;
+        }
+
+        ul.navbar-nav.me-auto.mb-2.mb-lg-0 {
+            font-size: 20px;
+            font-family: "Playwrite AT", cursive;
+            font-optical-sizing: auto;
+            font-weight: 550;
+            font-style: normal;
+        }
+
+        a.nav-link {
+            color: aliceblue;
+        }
+
+
+
+        form.d-flex {
+            border: none;
+            background: none;
+            font-family: "Playwrite AT", cursive;
+            font-optical-sizing: auto;
+            font-weight: 550;
+            font-style: normal;
+        }
+
+        input.form-control.me-2 {
+            border: none;
+            background: none;
+            border-bottom: 1px solid #4e2d2d;
+        }
+
+        input.form-control.me-2::placeholder {
+            font-size: 20px;
+            font-weight: 400;
+            color: aliceblue;
+        }
+
+        .btn-outline-success:hover {
+            border: none;
+            background: none;
+        }
+
+        button.btn.btn-outline-success {
+            border: none;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 300;
+            transition: 1s;
+        }
+
+        button.btn.btn-outline-success:hover {
+            transform: translateX(10px);
+            color: none;
+            border: none;
+        }
+
+        .nav-item {
+            padding-left: 10px;
+        }
+
+        .main {
+            width: 1170px;
+            margin: 100px auto;
+        }
+
+        .menus {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .menu-content p {
+            font-family: "Playwrite PE", cursive;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        .menu-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 26%;
+        }
+
+        .menu-column h4 {
+            text-transform: capitalize;
+            font-size: 35px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            color: #3e2723;
+            font-family: "Bona Nova SC", serif;
+            font-weight: 400;
+            font-style: italic;
+
+        }
+
+        .single-menu {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: .1s ease-in-out;
+        }
+
+        .single-menu:hover {
+            transform: translate(-10px, -10px);
+        }
+
+        .single-menu img {
+            max-width: 80px;
+            border-radius: 50%;
+            padding: 3px;
+            margin-right: 10px;
+            transition: .3s;
+        }
+
+        .single-menu:hover img {
+            transform: rotate(360deg);
+        }
+
+        .single-menu .menu-content {
+            flex: 1;
+
+        }
+
+        .menu-content {
+            max-width: 280px;
+            color: #3e2723;
+        }
+
+        .single-menu .menu-content h5 {
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight: 500;
+            border-bottom: 1px dashed #222;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-family: "Signika Negative", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        .single-menu .menu-content h5 span {
+            color: tomato;
+            font-weight: 600;
+            float: right;
+            margin-left: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin: 2px;
+            color: #f0e6d2;
+            background-color: #5e403a;
+            font-family: "Playwrite NO", cursive;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        footer .content-section {
+            margin-bottom: 20px;
+        }
+
+        footer .content-section a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #d4c5c3;
+            text-decoration: underline;
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            .main {
+                width: 970px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .main {
+                width: 750px;
+            }
+
+            .single-menu {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+                flex-direction: column;
+            }
+
+            .single-menu img {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .main {
+                width: 320px;
+            }
+
+            .menu-column {
+                width: 100%;
+                margin-bottom: 60px;
+            }
+
+            .single-menu {
+                flex-direction: column;
+            }
+
+            .single-menu img {
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <img src="BEAN DREAM Cafe.png" alt="Bean Dream Cafe" width="80px
+                  ">
+                <span id="cafe_name"> | Bean Dream Cafe</span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu.html">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="menus">
+            <!-- <h1> Our Menu</h1> -->
+            <div class="menu-column">
+                <h4>Chai</h4>
+                <div class="single-menu">
+                    <img src="simple-chai.jpg" alt="Simple-chai">
+                    <div class="menu-content">
+                        <h5>
+                            Simple Chai<span> RS 15 </span>
+                        </h5>
+                        <p>Simple Chai is warm, comforting.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="img2.jpg" alt="Ealchi-Chai">
+                    <div class="menu-content">
+                        <h5>
+                            Elachi Chai<span> RS 19</span>
+                        </h5>
+                        <p>Elachi Chai is aromatic,flavorful.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="masla-chai">
+                    <div class="menu-content">
+                        <h5>
+                            Masla Chai<span> RS 23</span>
+                        </h5>
+                        <p>Masala Chai is spiced, flavorful, invigorating.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="rose-chai.jpg" alt="Rose-chai">
+                    <div class="menu-content">
+                        <h5>
+                            Rose Chai<span> RS 26</span>
+                        </h5>
+                        <p>Rose Chai is fragrant,delicate,soothing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h4>Coffee</h4>
+                <div class="single-menu">
+                    <img src="Black Coffee.jpg" alt="Black Coffee">
+                    <div class="menu-content">
+                        <h5>
+                            Black Coffee<span> RS 30</span>
+                        </h5>
+                        <p>Lorem ipsum, dolor sit amet</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="Classic-Cold-Coffee.jpg" alt="Classic Cold Coffee">
+                    <div class="menu-content">
+                        <h5>
+                            Classic Cold Coffee<span> RS 35</span>
+                        </h5>
+                        <p>Black Coffee is strong, bold, invigorating.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="Cold-Brew-Caramel-coffee.jpg" alt="Cold Brew Caramel Coffee">
+                    <div class="menu-content">
+                        <h5>
+                            Cold Brew Caramel Coffee<span> RS 40</span>
+                        </h5>
+                        <p>Cold Brew Caramel Coffee is smooth, sweet, rich.
+                        </p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="Hot-And-Cold-Coffee.jpg" alt="Hot And Cold Coffee">
+                    <div class="menu-content">
+                        <h5>
+                            Hot And Cold Coffee<span> RS 59</span>
+                        </h5>
+                        <p>Hot and Cold Coffee is versatile, refreshing.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-column">
+                <h4>Sandwich</h4>
+                <div class="single-menu">
+                    <img src="Vegetable-Sandwich.jpg" alt="Vegetable Sandwich">
+                    <div class="menu-content">
+                        <h5>
+                            Vegetable Sandwich<span> RS 56</span>
+                        </h5>
+                        <p>Vegetable Sandwich is fresh, nutritious, flavorful.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="panner-sandwich.jpg" alt="Paneer Sandwich">
+                    <div class="menu-content">
+                        <h5>
+                            Paneer Sandwich<span> RS 65</span>
+                        </h5>
+                        <p>Paneer Sandwich is savory, hearty, satisfying.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="Tandoori-Paneer-Sandwich.jpg" alt="Tandoori Paneer Sandwich">
+                    <div class="menu-content">
+                        <h5>
+                            Tandoori Paneer Sandwich<span> RS 90</span>
+                        </h5>
+                        <p>Tandoori Paneer Sandwich is spicy, smoky, delicious.</p>
+                    </div>
+                </div>
+                <div class="single-menu">
+                    <img src="Cheese-Sandwich.jpg" alt="Cheese Sandwich">
+                    <div class="menu-content">
+                        <h5>
+                            Cheese Sandwich<span> RS 105</span>
+                        </h5>
+                        <p>Cheese Sandwich is creamy, savory, comforting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="content-section">
+            <h2>Contact</h2>
+            <p>
+                Feel free to reach out via email at
+                <a href="mailto:syangagandeep1512@gmail.com">syangagandeep1512@gmail.com</a>
+                or connect on <a href="https://wa.me/9041163065">WhatsApp: 9041163065</a>.
+            </p>
+        </div>
+        <p>&copy; 2024 Gagandeep Singh. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
